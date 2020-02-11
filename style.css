@@ -4,4 +4,23 @@
 
 input {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.valid-input {
+  border: 2px solid lightgreen;
+}
+
+.invalid-input {
+  border: 2px solid red;
+}
+
+.valid-p {
+  color: green;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.invalid-p {
+  color: red;
+  font-family: Helvetica, Arial, sans-serif;
 }
