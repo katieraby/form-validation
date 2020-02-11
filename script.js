@@ -5,6 +5,7 @@ const usernameLabel = document.querySelectorAll("label")[0];
 const validateUsername = event => {
   const regex = /\d\w\W+/g;
   const inputVal = event.target.value;
+
   if (regex.test(inputVal)) {
     event.target.classList.add("valid-input");
     event.target.classList.remove("invalid-input");
@@ -22,14 +23,12 @@ const validateUsername = event => {
   }
 };
 
-let firstClick = true;
 const removeMessages = event => {
-  if (firstClick) {
-    firstClick = false;
-  } else {
-    usernameLabel.removeChild(usernameLabel.lastChild);
-  }
+  const removeValid = document.getElementById("valid-input");
+  const removeInvalid = document.getElementById("invalid-input");
+  usernameLabel.removeChild(removeValid);
+  usernameLabel.removeChild(removeInvalid);
 };
 
 username.addEventListener("change", validateUsername);
-username.addEventListener("click", removeMessages);
+username.addEventListener("focus", removeMessages);
