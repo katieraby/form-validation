@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <title>Form Validation</title>
   </head>
-  <body></body>
+  <body>
+    <div class="form-container">
+      <form action="/" method="GET">
+        <label for="username">
+          Username
+          <input type="text" name="username" id="username" />
+        </label>
+
+        <label for="firstname">
+          First Name
+          <input type="text" name="firstname" id="firstname" />
+        </label>
+
+        <label for="lastname">
+          Last Name
+          <input type="text" name="lastname" id="lastname" />
+        </label>
+
+        <label for="dateofbirth">
+          Date of Birth
+          <input type="date" name="dateofbirth" id="dateofbirth" />
+        </label>
+
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
 </html>
