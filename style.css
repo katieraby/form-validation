@@ -10,6 +10,14 @@ h1 {
   color: #fff;
 }
 
+h2 {
+  margin-top: -20px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+
 .form-container {
   margin-left: auto;
   margin-right: auto;
@@ -39,6 +47,8 @@ input {
 }
 
 .valid-p {
+  margin-top: -10px;
+  margin-bottom: 20px;
   color: green;
   font-family: Helvetica, Arial, sans-serif;
 }

@@ -11,21 +11,24 @@ const validateUsername = event => {
     event.target.classList.remove("invalid-input");
     const validMessage = document.createElement("p");
     validMessage.classList.add("valid-p");
+    validMessage.id = "valid-p";
     validMessage.innerText = "Great! username is available";
     usernameLabel.appendChild(validMessage);
   } else {
     event.target.classList.add("invalid-input");
     event.target.classList.remove("valid-input");
     const invalidMessage = document.createElement("p");
+    
     invalidMessage.classList.add("invalid-p");
+    invalidMessage.id = "invalid-p";
     invalidMessage.innerText = "Username is not available";
     usernameLabel.appendChild(invalidMessage);
   }
 };
 
 const removeMessages = event => {
-  const removeValid = document.getElementById("valid-input");
-  const removeInvalid = document.getElementById("invalid-input");
+  const removeValid = document.getElementById("valid-p");
+  const removeInvalid = document.getElementById("invalid-p");
   usernameLabel.removeChild(removeValid);
   usernameLabel.removeChild(removeInvalid);
 };
